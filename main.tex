@@ -1,0 +1,198 @@
+\documentclass[letterpaper,11pt]{article}
+
+% ------- Packages -------
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{latexsym}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{baskervillef}
+\usepackage[T1]{fontenc}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\setlength{\parskip}{2pt}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries\vspace{-4pt}}{}{0em}{}[\titlerule\vspace{-6pt}]
+
+% Custom Commands
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.18in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.25in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\begin{document}
+
+%---------------------------------------------
+%                 HEADER
+%---------------------------------------------
+
+\begin{center}
+    {\Huge \textbf{Yan-Shuo Pan}}\\[6pt]
+    \href{mailto:richardwilly11532@gmail.com}{richardwilly11532@gmail.com} \,|\,
+    +886-972-933-326 \,|\,
+    \href{https://github.com/YanShuoPan}{GitHub: YanShuoPan} \,|\,
+    Changhua, Taiwan
+\end{center}
+
+%---------------------------------------------
+%            PROFESSIONAL SUMMARY
+%---------------------------------------------
+
+\section{Summary}
+\begin{itemize}[leftmargin=0.2in, itemsep=1pt]
+    \item Ph.D. in Statistics with multiple industry collaboration projects (Micron, Etron, ASE) applying ML/DL to semiconductor manufacturing, quantitative finance, and industrial analytics.
+    \item Skilled in ML pipelines from raw data to modeling: feature engineering from high-frequency sensor/trace data, model development (tree-based, deep learning, time-series), and result delivery.
+    \item Builder of full-stack AI applications integrating LLMs with statistical analysis workflows.
+\end{itemize}
+
+
+%---------------------------------------------
+%                 SKILLS
+%---------------------------------------------
+
+\section{Technical Skills}
+
+\resumeSubHeadingListStart
+\resumeItem{\textbf{Languages:} Python, R, SQL}
+\resumeItem{\textbf{ML / DL:} scikit-learn, XGBoost, LightGBM, PyTorch, TensorFlow}
+
+\resumeItem{\textbf{Infrastructure \& Tools:} Git, FastAPI, GitHub Actions, VS Code, Claude Code}
+\resumeItem{\textbf{Specialties:} High-dimensional variable selection, causal inference, time-series forecasting, anomaly detection, signal processing}
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%              PROFESSIONAL EXPERIENCE
+%---------------------------------------------
+
+\section{Professional Experience}
+
+\resumeSubHeadingListStart
+
+% ---------------- NTHU Postdoctoral Research -----------------
+\resumeItem{\textbf{National Tsing Hua University} \hfill Jun 2025 -- Present \\
+\textit{Postdoctoral Researcher, Institute of Statistics}}
+\resumeItemListStart
+    \resumeItem{Developing tree-based greedy algorithms (MPCGA) for high-dimensional variable selection, achieving improved logistic regression performance over classical methods.}
+    \resumeItem{Designing an AI-assisted statistical modeling platform that integrates LLM-driven query interpretation with automated analysis pipelines.}
+\resumeItemListEnd
+
+% ---------------- Morale AI -----------------
+\resumeItem{\textbf{Morale AI} \hfill 2025 -- Present \\
+\textit{Data Scientist / AI Agent Developer}}
+\resumeItemListStart
+    \resumeItem{Building AI agent systems that automate industrial data analysis workflows — from data ingestion, anomaly detection, to report generation — enabling non-technical clients to leverage ML insights without manual intervention.}
+    \resumeItem{ASE (Semiconductor): Developed anomaly detection models on multi-sensor time-series data, integrated into an agent pipeline for automated equipment health monitoring.}
+    \resumeItem{Yu Yuan Textile: Built manufacturing loss-rate prediction models as part of an AI-driven diagnostic agent for yield improvement.}
+\resumeItemListEnd
+
+
+
+% ---------------- Etron -----------------
+\resumeItem{\textbf{Etron Technology} \hfill 2022 \\
+\textit{ML Research Engineer (Industry Collaboration)}}
+\resumeItemListStart
+    \resumeItem{Built shipment volume prediction models using historical demand, WIP snapshots, and production schedules.}
+    \resumeItem{Designed hybrid ML/DL ensemble approach to improve small-sample time-series forecast stability.}
+\resumeItemListEnd
+
+% ---------------- Micron -----------------
+\resumeItem{\textbf{Micron Technology} \hfill 2020 \\
+\textit{Process Data Modeling Engineer (Industry Collaboration)}}
+\resumeItemListStart
+    \resumeItem{Predicted wafer etching depth from high-frequency tool trace signals, engineering 50+ features from raw waveform data.}
+    \resumeItem{Developed a multi-stage data-alignment method across sequential etch steps, improving cross-step modeling accuracy.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%                 PROJECTS
+%---------------------------------------------
+
+\section{Projects}
+
+\resumeSubHeadingListStart
+
+\resumeItem{\textbf{ModelBridge --- AI Statistical Method Advisor} \hfill 2025 -- Present \\
+\href{https://github.com/YanShuoPan/Model_Bridge}{\textcolor{blue}{github.com/YanShuoPan/Model\_Bridge}}}
+\resumeItemListStart
+    \resumeItem{Built a full-stack AI platform (FastAPI + Next.js) that interprets natural-language queries, recommends statistical methods, and executes end-to-end analysis pipelines with automated visualization.}
+\resumeItemListEnd
+
+\resumeItem{\textbf{Qtrading --- Automated Taiwan Stock Screener} \hfill 2025 \\
+\href{https://github.com/YanShuoPan/Qtrading}{\textcolor{blue}{github.com/YanShuoPan/Qtrading}}}
+\resumeItemListStart
+    \resumeItem{Developed a fully automated daily stock screening system with MA20-based technical analysis, K-line chart generation, and multi-user LINE notification delivery via GitHub Actions CI/CD.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%                 EDUCATION
+%---------------------------------------------
+
+\section{Education}
+\resumeSubHeadingListStart
+    \resumeItem{\textbf{National Tsing Hua University} \hfill 2018 -- 2024 \\
+    Ph.D. in Statistics \,|\, M.S. in Statistics}
+
+    \resumeItem{\textbf{National Central University} \hfill 2015 -- 2018 \\
+    B.S. in Mathematics \,|\, Minor in Computer Science}
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%                 RESEARCH
+%---------------------------------------------
+
+\section{Publications \& Research}
+
+\resumeSubHeadingListStart
+\resumeItem{\textbf{MPCGA: A Tree-Based Chebychev's Greedy Algorithm} \\
+Extended Chebyshev's greedy algorithm into multi-path tree-based selection, improving logistic regression variable selection performance. \textit{(Under review)}}
+
+\resumeItem{\textbf{Multiple Robust ATE Estimator with High-Dimensional Covariates} \\
+Proposed a multi-step Chebyshev-greedy-based doubly robust estimator for average treatment effect estimation under high-dimensional confounders. \textit{(Manuscript in preparation)}}
+
+\resumeItem{\textbf{On Lasso with Many Time Series Predictors and Moderately Dense Coefficients} \\
+Unified Lasso theory for time-series predictors under hard and soft sparsity, deriving prediction error convergence rates and showing reduced variable requirements for moderately dense coefficients. \textit{Published in JJSD.}}
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%                 AWARDS
+%---------------------------------------------
+
+\section{Awards}
+\resumeSubHeadingListStart
+    \resumeItem{Ching-Zong Wei Memorial Award --- Chinese Institute of Probability and Statistics (2023)}
+    \resumeItem{Cultivate Outstanding Doctoral Students Scholarship --- NSTC (2019--2023)}
+    \resumeItem{Presidential Scholarship --- National Tsing Hua University (2019--2023)}
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%          TEACHING EXPERIENCE
+%---------------------------------------------
+
+\section{Teaching}
+\resumeSubHeadingListStart
+    \resumeItem{\textbf{Teaching Assistant, National Tsing Hua University} \hfill 2019 -- 2024 \\
+    Industrial Statistics \& Data Science \,|\, High-Dimensional Data Analysis \,|\, Probability Theory \,|\, Time Series Analysis}
+\resumeSubHeadingListEnd
+
+\end{document}
