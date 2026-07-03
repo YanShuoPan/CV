@@ -1,0 +1,180 @@
+% 简体中文版简历 — 需以 XeLaTeX 编译（Overleaf: Menu → Compiler → XeLaTeX）
+\documentclass[11pt]{ctexart}
+
+% ------- Packages -------
+\usepackage[colorlinks=true, urlcolor=blue]{hyperref}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage[margin=0.55in]{geometry}
+\usepackage{ragged2e}
+\usepackage{setspace}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\setlength{\parskip}{2pt}
+
+% Section formatting
+\titleformat{\section}{\Large\bfseries\vspace{-4pt}}{}{0em}{}[\titlerule\vspace{-6pt}]
+
+% Custom Commands
+\newcommand{\resumeItem}[1]{\item #1}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.18in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.25in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}}
+
+\begin{document}
+
+%---------------------------------------------
+%                 HEADER
+%---------------------------------------------
+
+\begin{center}
+    % TODO: 请确认中文姓名用字
+    {\Huge \textbf{潘彦硕 (Yan-Shuo Pan)}}\\[6pt]
+    \href{mailto:richardwilly11532@gmail.com}{richardwilly11532@gmail.com} \,|\,
+    +886-972-933-326 \,|\,
+    \href{https://github.com/YanShuoPan}{GitHub: YanShuoPan} \,|\,
+    台湾彰化
+\end{center}
+
+%---------------------------------------------
+%            PROFESSIONAL SUMMARY
+%---------------------------------------------
+
+\section{个人简介}
+\begin{itemize}[leftmargin=0.2in, itemsep=1pt]
+    \item 构建全栈大语言模型（LLM）应用与 AI 智能体系统，自动化统计分析与工业数据工作流。
+    \item 统计学博士，专注高维变量选择与因果推断，拥有同行评审论文发表，及横跨半导体与纺织制造业的机器学习项目经验。
+    \item 熟悉端到端机器学习流程：高频传感器信号特征工程、模型开发（树模型、深度学习、时间序列），以及面向非技术人员的成果交付。
+\end{itemize}
+
+
+%---------------------------------------------
+%                 SKILLS
+%---------------------------------------------
+
+\section{技术能力}
+
+\resumeSubHeadingListStart
+\resumeItem{\textbf{编程语言：}Python、R、SQL}
+\resumeItem{\textbf{机器学习 / 深度学习：}scikit-learn、XGBoost、LightGBM、PyTorch、TensorFlow}
+\resumeItem{\textbf{基础设施与工具：}Git、Docker、FastAPI、GitHub Actions}
+\resumeItem{\textbf{LLM 与智能体：}OpenAI API、Claude Code、LLM 集成应用开发、AI Agent 流水线}
+\resumeItem{\textbf{专长领域：}高维变量选择、因果推断、时间序列预测、异常检测、信号处理}
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%              WORK EXPERIENCE
+%---------------------------------------------
+
+\section{工作经历}
+
+\resumeSubHeadingListStart
+
+% ---------------- NTHU Postdoctoral Research -----------------
+\resumeItem{\textbf{台湾清华大学（新竹）} \hfill 2025 -- 至今 \\
+\textit{统计学研究所\ 博士后研究员}}
+\resumeItemListStart
+    \resumeItem{开发 MPCGA——多路径树状变量选择算法，在高维分类任务中测试准确率较 Lasso 最高提升 14 个百分点，且所选特征显著更少。}
+    \resumeItem{将 MPCGA 应用于呼气 VOC 肺癌检测，筛选出约 12 个生物标志物的紧凑组合，支持低成本呼气传感器设计。}
+    \resumeItem{设计 Stat-Assistant（见项目经历）——基于上传的方法与文献构建可检索知识库、为统计咨询提供依据的 LLM 平台。}
+\resumeItemListEnd
+
+% ---------------- Morale AI -----------------
+\resumeItem{\textbf{Morale AI} \hfill 2025 -- 至今 \\
+\textit{数据科学家 / AI Agent 开发（兼职）}}
+\resumeItemListStart
+    \resumeItem{构建自动化工业数据分析工作流的 AI 智能体系统，涵盖数据接入、异常检测与报告生成，使非技术背景客户无需人工干预即可获得机器学习洞察。}
+    \resumeItem{Trueway（纺织）：构建 AI 智能体，根据目标布种与颜色推荐原料供应商及机台，并开发织造工艺的瑕疵预测模型。}
+    \resumeItem{Yu Yuan Textile（纺织）：为 AI 诊断智能体构建制造损耗率预测模型，用于提升良率。}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%                 PROJECTS
+%---------------------------------------------
+
+\section{项目经历}
+
+\resumeSubHeadingListStart
+
+\resumeItem{\textbf{Stat-Assistant --- 面向统计研究的 LLM 知识平台} \hfill 2025 -- 至今 \\
+\href{https://github.com/YanShuoPan/stat-assistant}{github.com/YanShuoPan/stat-assistant}}
+\resumeItemListStart
+    \resumeItem{构建全栈 LLM 平台（FastAPI、Next.js、PostgreSQL）：研究者上传论文后自动解析为可检索知识库，并与基于混合检索（覆盖 19 个统计领域）的助手对话。}
+\resumeItemListEnd
+
+% ---------------- Etron -----------------
+\resumeItem{\textbf{钰创科技（Etron）--- 出货量预测} \hfill 2022 \\
+\textit{产学合作项目（台湾清华大学）}}
+\resumeItemListStart
+    \resumeItem{基于历史需求、在制品（WIP）快照与生产排程构建出货量预测模型。}
+    \resumeItem{设计机器学习／深度学习混合集成方法，提升小样本时间序列预测的稳定性。}
+\resumeItemListEnd
+
+% ---------------- Micron -----------------
+\resumeItem{\textbf{美光科技（Micron）--- 晶圆蚀刻深度预测} \hfill 2020 \\
+\textit{产学合作项目（台湾清华大学）}}
+\resumeItemListStart
+    \resumeItem{基于高频机台 trace 信号预测晶圆蚀刻深度，从原始波形数据构建 50+ 特征。}
+    \resumeItem{开发跨连续蚀刻步骤的多阶段数据对齐方法，提升跨步骤建模准确率。}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%                 EDUCATION
+%---------------------------------------------
+
+\section{教育背景}
+\resumeSubHeadingListStart
+    \resumeItem{\textbf{台湾清华大学} \hfill 2018 -- 2024 \\
+    统计学博士（直博）}
+
+    \resumeItem{\textbf{台湾中央大学} \hfill 2015 -- 2018 \\
+    数学学士 \,|\, 辅修计算机科学}
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%                 RESEARCH
+%---------------------------------------------
+
+\section{论文发表与研究}
+
+\resumeSubHeadingListStart
+\resumeItem{\textbf{On Lasso with Many Time Series Predictors and Moderately Dense Coefficients} \hfill \textit{2026} \\
+C.-Y. Sin, \textbf{Y.-S. Pan}, C.-K. Ing \,|\, \textit{Japanese Journal of Statistics and Data Science} \,|\, \href{https://doi.org/10.1007/s42081-026-00347-z}{doi:10.1007/s42081-026-00347-z} \\
+统一时间序列预测变量在硬稀疏与软稀疏下的 Lasso 理论，证明在中等稠密系数下达到目标收敛速率所需的候选变量数可大幅减少。}
+
+\resumeItem{\textbf{MPCGA: A Tree-Based Chebyshev Greedy Algorithm} \hfill \textit{第一作者，审稿中} \\
+将贪婪变量选择推广为多路径树搜索，在高维逻辑回归中较经典惩罚类方法实现更稳定、更准确的变量选择。}
+
+\resumeItem{\textbf{Multiply Robust ATE Estimator with High-Dimensional Covariates} \hfill \textit{第一作者，撰写中} \\
+提出基于多步 Chebyshev 贪婪算法的多重稳健平均处理效应（ATE）估计器，适用于高维混杂变量场景。}
+\resumeSubHeadingListEnd
+
+
+%---------------------------------------------
+%                 AWARDS
+%---------------------------------------------
+
+\section{荣誉奖项}
+\resumeSubHeadingListStart
+    \resumeItem{魏庆荣纪念奖 --- 中华机率统计学会（台湾，2023）}
+    \resumeItem{培育优秀博士生奖学金 --- NSTC（2019--2023）}
+    \resumeItem{校长奖学金 --- 台湾清华大学（2019--2023）}
+\resumeSubHeadingListEnd
+
+\end{document}
