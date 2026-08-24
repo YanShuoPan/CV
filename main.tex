@@ -42,6 +42,7 @@
     \href{mailto:richardwilly11532@gmail.com}{richardwilly11532@gmail.com} \,|\,
     +886-972-933-326 \,|\,
     \href{https://github.com/YanShuoPan}{GitHub: YanShuoPan} \,|\,
+    \href{https://www.linkedin.com/in/yanshuopan}{LinkedIn: yanshuopan} \,|\,
     Changhua, Taiwan
 \end{center}
 
@@ -51,9 +52,9 @@
 
 \section{Summary}
 \begin{itemize}[leftmargin=0.2in, itemsep=1pt]
-    \item Builds full-stack LLM applications and AI agent systems that automate statistical analysis and industrial data workflows.
-    \item Ph.D. in Statistics specializing in high-dimensional variable selection and causal inference, with peer-reviewed research and industry ML projects across semiconductor and textile manufacturing.
-    \item Skilled in end-to-end ML pipelines: feature engineering from high-frequency sensor and trace data, model development (tree-based, deep learning, time-series), and delivery to non-technical stakeholders.
+    \item Data scientist and AI engineer with a Ph.D. in Statistics, delivering production ML and AI agent systems for semiconductor and textile manufacturing clients.
+    \item Builds end-to-end pipelines from raw sensor/trace data to deployed models: feature engineering, tree-based and deep learning models, time-series forecasting, and automated reporting for non-technical stakeholders.
+    \item Develops LLM applications with RAG retrieval (embeddings, hybrid search) and multi-step agent workflows; peer-reviewed researcher in high-dimensional variable selection.
 \end{itemize}
 
 
@@ -66,9 +67,8 @@
 \resumeSubHeadingListStart
 \resumeItem{\textbf{Languages:} Python, R, SQL}
 \resumeItem{\textbf{ML / DL:} scikit-learn, XGBoost, LightGBM, PyTorch, TensorFlow}
-
-\resumeItem{\textbf{Infrastructure \& Tools:} Git, Docker, FastAPI, GitHub Actions}
-\resumeItem{\textbf{LLM \& Agents:} OpenAI API, Claude Code, LLM-integrated application development, AI agent pipelines}
+\resumeItem{\textbf{Infrastructure \& Tools:} Git, Docker, FastAPI, PostgreSQL, GitHub Actions (CI/CD)}
+\resumeItem{\textbf{LLM \& Agents:} OpenAI API, Claude API, RAG pipelines (embeddings, hybrid search), AI agent workflow design}
 \resumeItem{\textbf{Specialties:} High-dimensional variable selection, causal inference, time-series forecasting, anomaly detection, signal processing}
 \resumeSubHeadingListEnd
 
@@ -81,22 +81,32 @@
 
 \resumeSubHeadingListStart
 
-% ---------------- NTHU Postdoctoral Research -----------------
-\resumeItem{\textbf{National Tsing Hua University} \hfill 2025 -- Present \\
-\textit{Postdoctoral Researcher, Institute of Statistics}}
-\resumeItemListStart
-    \resumeItem{Developing MPCGA, a multi-path tree-based variable selection algorithm that outperforms Lasso by up to 14 points in test accuracy while selecting far fewer features.}
-    \resumeItem{Applying MPCGA to lung-cancer detection from exhaled-breath VOC data, identifying a compact panel of about 12 biomarkers for low-cost breath-sensor design.}
-    \resumeItem{Designing Stat-Assistant (see Projects), an LLM platform that grounds statistical consulting in a retrieval-ready knowledge base built from uploaded methods and papers.}
-\resumeItemListEnd
-
 % ---------------- Morale AI -----------------
-\resumeItem{\textbf{Morale AI} \hfill 2025 -- Present \\
+\resumeItem{\textbf{Morale AI} \hfill Jul 2025 -- Present \\
 \textit{Data Scientist / AI Agent Developer (Part-time)}}
 \resumeItemListStart
-    \resumeItem{Building AI agent systems that automate industrial data analysis workflows spanning data ingestion, anomaly detection, and report generation, enabling non-technical clients to leverage ML insights without manual intervention.}
-    \resumeItem{Trueway (Textile): Built an AI agent recommending raw-material suppliers and machines from a target fabric type and color, plus defect prediction models for the weaving process.}
-    \resumeItem{Yu Yuan Textile: Built manufacturing loss-rate prediction models as part of an AI-driven diagnostic agent for yield improvement.}
+    \resumeItem{Building AI agent systems that automate industrial data analysis --- ingestion, anomaly detection, and report generation --- for manufacturing clients without in-house data teams.}
+    \resumeItem{Trueway (Textile): Built an AI agent that recommends knitting machines and yarn suppliers for a target fabric type and dye class, integrating 100K+ production records from 7 ERP sources; backtested recommendations against historical defect rates, replacing experience-based manual machine assignment.}
+    \resumeItem{Yu Yuan Textile: Built per-fabric CatBoost models on three years of dyeing and finishing production data, predicting batch-level loss rate within 2--3 percentage points (test MAE); used SHAP analysis to pinpoint loss-driving process stations, powering an AI diagnostic agent for yield improvement.}
+\resumeItemListEnd
+
+% ---------------- NTHU Postdoctoral Research -----------------
+\resumeItem{\textbf{National Tsing Hua University} \hfill Jul 2025 -- Present \\
+\textit{Postdoctoral Researcher, Institute of Statistics}}
+\resumeItemListStart
+    \resumeItem{Developing MPCGA, a multi-path tree-based variable selection algorithm that outperforms Lasso by up to 14 points in test accuracy; applying it to exhaled-breath VOC lung-cancer detection, identifying a compact panel of about 12 biomarkers for low-cost sensor design.}
+    \resumeItem{Developing a multiply robust average-treatment-effect estimator for causal inference under high-dimensional confounders (first-author manuscript in preparation).}
+\resumeItemListEnd
+
+% ---------------- Military Service -----------------
+\resumeItem{\textbf{Compulsory Military Service, Taiwan} \hfill Feb 2025 -- Jun 2025}
+
+% ---------------- NTHU Industry Collaborations -----------------
+\resumeItem{\textbf{National Tsing Hua University --- Industry Collaborations} \hfill 2020 -- 2022 \\
+\textit{Research Collaborator (Micron, Etron)}}
+\resumeItemListStart
+    \resumeItem{Micron (2020): Predicted wafer etch depth from per-second tool trace signals (104 sensor variables per wafer); high-dimensional greedy variable selection reached a median test $R^2$ of 0.6 over 1,000 resampling splits, outperforming XGBoost and deep-learning baselines that degenerated to mean prediction.}
+    \resumeItem{Etron (2022): Forecast monthly shipment volumes for 9 memory product lines from 6+ years of demand history; stabilized volatile small-sample forecasts with adaptive-Lasso and bootstrap stacking ensembles.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -113,23 +123,14 @@
 \resumeItem{\textbf{Stat-Assistant --- LLM Knowledge Platform for Statistical Research} \hfill 2025 -- Present \\
 \href{https://github.com/YanShuoPan/stat-assistant}{github.com/YanShuoPan/stat-assistant}}
 \resumeItemListStart
-    \resumeItem{Built a full-stack LLM platform (FastAPI, Next.js, PostgreSQL) where researchers upload papers that are parsed into a retrieval-ready knowledge base, and chat with an assistant grounded in hybrid search spanning 19 statistical domains.}
+    \resumeItem{Built a full-stack RAG platform (FastAPI, Next.js, PostgreSQL) where researchers upload papers that are parsed into a retrieval-ready knowledge base, and chat with an LLM assistant grounded in hybrid search (semantic embeddings + keyword) spanning 19 statistical domains.}
 \resumeItemListEnd
 
-% ---------------- Etron -----------------
-\resumeItem{\textbf{Etron --- Shipment Volume Forecasting} \hfill 2022 \\
-\textit{Industry--Academia Collaboration, NTHU}}
+% ---------------- Qtrading -----------------
+\resumeItem{\textbf{Qtrading --- Automated Taiwan Stock Screener} \hfill 2025 \\
+\href{https://github.com/YanShuoPan/Qtrading}{github.com/YanShuoPan/Qtrading}}
 \resumeItemListStart
-    \resumeItem{Built shipment volume prediction models using historical demand, WIP snapshots, and production schedules.}
-    \resumeItem{Designed hybrid ML/DL ensemble approach to improve small-sample time-series forecast stability.}
-\resumeItemListEnd
-
-% ---------------- Micron -----------------
-\resumeItem{\textbf{Micron --- Wafer Etch Depth Prediction} \hfill 2020 \\
-\textit{Industry--Academia Collaboration, NTHU}}
-\resumeItemListStart
-    \resumeItem{Predicted wafer etching depth from high-frequency tool trace signals, engineering 50+ features from raw waveform data.}
-    \resumeItem{Developed a multi-stage data-alignment method across sequential etch steps, improving cross-step modeling accuracy.}
+    \resumeItem{Fully automated daily stock screening pipeline with technical-indicator analysis, K-line chart generation, and multi-user LINE notification delivery, scheduled via GitHub Actions CI/CD.}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -141,7 +142,7 @@
 
 \section{Education}
 \resumeSubHeadingListStart
-    \resumeItem{\textbf{National Tsing Hua University} \hfill 2018 -- 2024 \\
+    \resumeItem{\textbf{National Tsing Hua University} \hfill Sep 2018 -- Oct 2024 \\
     Ph.D. in Statistics}
 
     \resumeItem{\textbf{National Central University} \hfill 2015 -- 2018 \\
