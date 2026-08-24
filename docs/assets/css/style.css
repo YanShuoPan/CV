@@ -32,7 +32,7 @@ h1 span { color: var(--muted); font-size: .5em; white-space: nowrap; }
 .button.primary { color: white; background: var(--ink); }
 .button:hover { transform: translateY(-2px); }
 .hero-card { padding: 30px; border: 1px solid var(--line); border-radius: 24px; background: var(--card); box-shadow: 18px 18px 0 #e3dfd3; }
-.monogram { display: grid; width: 90px; height: 90px; place-items: center; margin-bottom: 25px; border-radius: 50%; color: white; background: var(--green); font: 700 2rem "Libre Franklin"; }
+.profile-photo { display: block; width: 100%; aspect-ratio: 1 / 1; margin-bottom: 25px; border-radius: 16px; object-fit: cover; object-position: center 24%; }
 .status { font-size: .85rem; font-weight: 600; }
 .status span { display: inline-block; width: 8px; height: 8px; margin-right: 6px; border-radius: 50%; background: #4aa37d; }
 dl { margin: 25px 0 0; }
